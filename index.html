@@ -1,0 +1,1091 @@
+
+
+<!doctype html>
+<html lang="eng">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+        <!-- favicon -->
+        <link rel="icon" href="images/favicon.ico">
+
+
+        <!-- Bootstrap link -->
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <!-- google fonts link -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
+        <!-- font awesome link -->
+        <script src="https://kit.fontawesome.com/9cee552667.js" crossorigin="anonymous"></script>
+
+        <!-- unicon link -->
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+
+        <!-- lightbox plugin -->
+        <link rel="stylesheet" type="text/css" href="lightbox/simple-lightbox.css">
+
+        <!-- tiny slider carousel plugin -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.helper.ie8.js"></script>
+
+        <!-- AOS link -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        
+        <!-- css stylesheet link -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        
+
+
+
+        <title>ZuriChaffeur</title>
+
+        
+    </head>
+
+    
+    <body class="body">
+
+        <div class="wrapper">
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                   
+                    <div class="modal-body">
+                        
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class=" col-md-12 col-sm-12 booking-holder ">
+                                
+                                    <div class="booking-div scale">
+                                         <div class="text-center booking-header ">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                              </button>
+                                             <h2 class="blue">Car&nbsp;booking </h2>
+                                             
+                                         </div>
+                                         <div class="booking-details">
+                                             <form class="pickup-form">
+                                                 <p class="pickup-header">Pickup</p>
+                                                 <div class="form-group">
+                                                     <label for="inputPickup" class="labels">Address</label>
+                                                     <input type="text" class="form-control" id="inputPickup" placeholder="Your preferred pickup location">
+                                                 </div>
+                                                 <div class="form-row">
+                                                 <div class="form-group col-md-6">
+                                                     <img src="images/calendar.svg" alt="" class="calendar book-icons">
+                                                     <label for="inputPickupDate" class="labels">Date</label>
+                                                     <input type="date" class="form-control" id="inputPickupDate" placeholder="Date">
+                                                 </div>
+                                                 <div class="form-group col-md-6">
+                                                     <img src="images/clock.svg" alt="" class="clock book-icons">
+                                                     <label for="inputPickupTime" class="labels">Time</label>
+                                                     <input  type="text" class="form-control" id="inputPickupTime" placeholder="8 AM">
+                                                 </div>
+                                                 </div>
+                                                 
+                                                 
+                                             </form>
+        
+                                             <form class="dropoff-form">
+                                                 <p class="pickup-header">Dropoff</p>
+                                                 <div class="form-group">
+                                                     <label for="inputDropoff" class="labels">Address</label>
+                                                     <input type="text" class="form-control" id="inputDropoff" placeholder="Your preferred pickup location">
+                                                 </div>
+                                                 <div class="form-row">
+                                                 <div class="form-group col-md-6">
+                                                     <img src="images/calendar.svg" alt="" class="calendar book-icons">
+                                                     <label for="inputDropoffDate" class="labels">Date</label>
+                                                     <input type="date" class="form-control" id="inputDropoffDate" placeholder="Date">
+                                                 </div>
+                                                 <div class="form-group col-md-6">
+                                                     <img src="images/clock.svg" alt="" class="clock book-icons">
+                                                     <label for="inputDropoffTime" class="labels">Time</label>
+                                                     <input  type="text" class="form-control" id="inputDropoffTime" placeholder="8 AM">
+                                                 </div>
+                                                 </div>
+                                                 
+                                                 
+                                             </form>
+        
+                                             <div class="form-group" >
+                                                 <div class="form-check">
+                                                 <input class="form-check-input" type="checkbox" id="return">
+                                                 <label class="form-check-label " for="return" id="return">
+                                                     Return to pickup location
+                                                 </label>
+                                                 </div>
+                                             </div>
+                                             <div class="text-center"><button class="btn  booking-btn">Book now</button></div>
+        
+                                         </div>
+                                    </div>
+        
+                                 
+        
+                                </div>
+
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                    
+                
+                </div>
+            </div>
+
+            <!-- header section -->
+            <header id="home" class="">
+                <div class="header-container">
+                    <!-- navigation bars -->
+                    <nav>
+                        <div class="nav-lg">
+                            <div class="brand-holder"><a href="#home"><img class="logo logo-lg" src="images/logo.svg" alt="logo"></a></div>
+                            <div class="nav-holder home"><a class="animated active" href="#home">Home</a></div>
+                            <div class="nav-holder"><a class="animated others" href="#services">Services</a></div>
+                            <div class="nav-holder"><a class="animated others" href="#about">About</a></div>
+                            <div class="nav-holder"><a class="animated others" href="#cars">Our&nbsp;Cars</a></div>
+                            <div class="nav-holder " id="last"><a class="animated others" href="#contact">Contact</a></div>
+                        </div>
+                        <div class="nav-sm">
+                            <div class="brand-holder"><a href="#home"><img class="logo" src="images/logo.svg" alt="logo"></a></div>
+                            <div class=" droper"><a href="#"><i class="uil uil-bars icon bars"></i></a></div>
+                        </div>
+                        <div class="nav-sm-dropdown">
+                            <div id="alt" class="nav-holder text-center "><a  class="closers" href="#home">Home</a></div>
+                            <div class="nav-holder text-center"><a class="closers" href="#services">Services</a></div>
+                            <div id="alt" class="nav-holder text-center "><a  class="closers" href="#about">About</a></div>
+                            <div class="nav-holder text-center"><a class="closers" href="#cars">Our&nbsp;Cars</a></div>
+                            <div id="alt" class="nav-holder text-center " id="last"><a class="closers" href="#contact">Contact</a></div>
+                        </div>
+                    </nav>
+
+                    <!-- hero text container -->
+                    <div class="hero-holder container-fluid" data-aos="fade-right" data-aos-duration="1500">
+                        <h1 class="font-weight-bold">Your favorite<br>Chauffeur service hub</h1>
+                        <p>Best friendly driver’s experience in the world</p>
+                        <a href="#services" class="btn book-btn lg-modal" >Book a car</a>
+                        <a href="#services" class="btn book-btn sm-modal" >Book a car</a>
+
+                    </div>
+
+                    <!-- social media handles container -->
+                    <div class="sm-holder " data-aos="fade-left" data-aos-duration="1500">
+                        <div class="icon-holder"><i class="uil uil-linkedin sm-icons white"></i></div>
+                        <div class="icon-holder"><i class="uil uil-instagram-alt sm-icons white"></i></div>
+                        <div class="icon-holder"><i class="uil uil-facebook sm-icons white"></i></div>
+                        <div class="icon-holder"><i class="uil uil-twitter sm-icons white"></i></div>
+                    </div>
+
+                </div>
+             
+            </header>
+    
+            <main>
+
+                <!-- service section -->
+                <section id="services" class="sections ">
+                    <div class="container-fluid services-container">
+                        <div class="row services-row">
+                            <div class="col-lg-4 col-md-4 booking-holder " data-aos="fade-right" data-aos-duration="1500">
+                                
+                                   <div class="booking-div scale">
+                                        <div class="text-center booking-header">
+                                            <h2 class="blue">Car&nbsp;booking</h2>
+
+                                        </div>
+                                        <div class="booking-details">
+                                            <form class="pickup-form">
+                                                <p class="pickup-header">Pickup</p>
+                                                <div class="form-group">
+                                                    <label for="inputPickup" class="labels">Address</label>
+                                                    <input type="text" class="form-control" id="inputPickup" placeholder="Your preferred pickup location">
+                                                </div>
+                                                <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <img src="images/calendar.svg" alt="" class="calendar book-icons">
+                                                    <label for="inputPickupDate" class="labels">Date</label>
+                                                    <input type="date" class="form-control" id="inputPickupDate" placeholder="Date">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <img src="images/clock.svg" alt="" class="clock book-icons">
+                                                    <label for="inputPickupTime" class="labels">Time</label>
+                                                    <input  type="text" class="form-control" id="inputPickupTime" placeholder="8 AM">
+                                                </div>
+                                                </div>
+                                                
+                                                
+                                            </form>
+
+                                            <form class="dropoff-form">
+                                                <p class="pickup-header">Dropoff</p>
+                                                <div class="form-group">
+                                                    <label for="inputDropoff" class="labels">Address</label>
+                                                    <input type="text" class="form-control" id="inputDropoff" placeholder="Your preferred pickup location">
+                                                </div>
+                                                <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <img src="images/calendar.svg" alt="" class="calendar book-icons">
+                                                    <label for="inputDropoffDate" class="labels">Date</label>
+                                                    <input type="date" class="form-control" id="inputDropoffDate" placeholder="Date">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <img src="images/clock.svg" alt="" class="clock book-icons">
+                                                    <label for="inputDropoffTime" class="labels">Time</label>
+                                                    <input  type="text" class="form-control" id="inputDropoffTime" placeholder="8 AM">
+                                                </div>
+                                                </div>
+                                                
+                                                
+                                            </form>
+
+                                            <div class="form-group" >
+                                                <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="return">
+                                                <label class="form-check-label " for="return" id="return">
+                                                    Return to pickup location
+                                                </label>
+                                                </div>
+                                            </div>
+                                            <div class="text-center"><button class="btn  booking-btn">Book now</button></div>
+
+                                        </div>
+                                   </div>
+
+                                
+
+                            </div>
+                            <div class="col-lg-8 services-holder " data-aos="fade-left" data-aos-duration="1500">
+                                <div class="services-div black ">
+                                    <div class="services-heading">
+                                        <h2 class="headings">Welcome to <span class="blue">Zuri Chaffeur</span></h2>
+                                        <p class="small-text">This is a chaffeur company portfolio . It shows you why you
+                                         should patronise Zuri Chaffeur </p>
+                                    </div>
+
+                                    <!-- services section for big screens -->
+                                    <div class="container-fluid big-screen">
+                                        <div class="row small-row">
+                                            <div class="col-md-6 small-divs">
+                                                <div class="small-icons-holder">
+                                                    <img src="images/airplane.svg" alt="" class="services-icons">
+                                                </div>
+                                                <div>
+                                                    <h6 class="small-heading">Airport pickup</h6>
+                                                    <p class="small-text grey">There are two types of people, those who listen well and those who
+                                                         prefer not to speak</p>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-md-6 small-divs">
+                                                <div class="small-icons-holder">
+                                                    <img src="images/sitter.svg" alt="" class="services-icons">
+                                                </div>
+                                                <div>
+                                                    <h6 class="small-heading">Combined tour</h6>
+                                                    <p class="small-text grey">There are two types of people, those who listen well and those who
+                                                         prefer not to speak</p>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row small-row">
+                                            <div class="col-md-6 small-divs">
+                                                <div class="small-icons-holder">
+                                                    <img src="images/car-move.svg" alt="" class="services-icons">
+                                                </div>
+                                                <div>
+                                                    <h6 class="small-heading">Car rental</h6>
+                                                    <p class="small-text grey">There are two types of people, those who listen well and those who
+                                                         prefer not to speak</p>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-md-6 small-divs">
+                                                <div class="small-icons-holder ">
+                                                    <img src="images/coverage.svg" alt="" class="services-icons exception">
+                                                </div>
+                                                <div>
+                                                    <h6 class="small-heading">Wedding event coverage</h6>
+                                                    <p class="small-text grey">There are two types of people, those who listen well and those who
+                                                         prefer not to speak</p>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- services section for small screens -->
+                                    <div class="container-fluid small-screen">
+                                        <div class="row small-row" >
+                                            <div class="col-md-6 small-divs">
+                                                <div class="small-icons-holder">
+                                                    <img src="images/airplane-sm.svg" alt="" class="services-icons">
+                                                </div>
+                                                <div>
+                                                    <h6 class="small-heading">Airport pickup</h6>
+                                                    <p class="small-text grey">There are two types of people, those who listen well and those who
+                                                         prefer not to speak</p>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-md-6 small-divs">
+                                                <div class="small-icons-holder">
+                                                    <img src="images/sitter-sm.svg" alt="" class="services-icons">
+                                                </div>
+                                                <div>
+                                                    <h6 class="small-heading">Combined tour</h6>
+                                                    <p class="small-text grey">There are two types of people, those who listen well and those who
+                                                         prefer not to speak</p>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row small-row">
+                                            <div class="col-md-6 small-divs">
+                                                <div class="small-icons-holder">
+                                                    <img src="images/car-sm.svg" alt="" class="services-icons">
+                                                </div>
+                                                <div>
+                                                    <h6 class="small-heading">Car rental</h6>
+                                                    <p class="small-text grey">There are two types of people, those who listen well and those who
+                                                         prefer not to speak</p>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-md-6 small-divs">
+                                                <div class="small-icons-holder">
+                                                    <img src="images/cov-sm.svg" alt="" class="services-icons">
+                                                </div>
+                                                <div>
+                                                    <h6 class="small-heading">Wedding event coverage</h6>
+                                                    <p class="small-text grey">There are two types of people, those who listen well and those who
+                                                         prefer not to speak</p>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+                <!-- about section -->
+                <section id="about" class="about">
+                    <div class="container-fluid about-container">
+                        <div class="row">
+                            <div class="col-md-6 about-holder black" data-aos="fade-down-right" data-aos-duration="1500">
+                                <h2 class="headings">About Zuri Chauffeur</h2>
+                                <p class="small-text">There are two types of people, those who listen well and those who prefer not to speak. There are two types of people, those who listen well and those who prefer not to speak. 
+                                    There are two types of people, those who listen well and those who prefer not to speak</p>
+                                <div class=""><button class="btn booking-btn about-btn">Learn More</button></div>
+                            </div>
+
+                            <div class="col-md-6 about-pic-holder" data-aos="fade-down-left" data-aos-duration="1500">
+                                <img src="images/about.jpg" alt="" class="about-img img-fluid">
+                                <img src="images/play.svg" alt="" class="play-icon">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- press section -->
+                <section id="" class="press sections">
+                    <div class="text-center press-heading black">
+                        <h2 class="headings grey">We have chauffeured individuals from</h2>
+                    </div>
+                    <div class="container-fluid press-container">
+                        <div class="row press-row" data-aos="flip-up" data-aos-duration="1500">
+                            <div class="press-holder col-md-6">
+                                <div class="press-inner">
+                                    <div>
+                                        <img src="images/press-logo.jpg" alt="" class="press-logo">
+                                    </div>
+                                    <div>
+                                        <img src="images/press-logo.jpg" alt="" class="press-logo">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="press-holder col-md-6">
+                                <div class="press-inner">
+                                    <div>
+                                        <img src="images/press-logo.jpg" alt="" class="press-logo">
+                                    </div>
+                                    <div>
+                                        <img src="images/press-logo.jpg" alt="" class="press-logo">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- car fleet section -->
+                <section class="sections fleet" id="cars">
+                    <div class="fleet-top">
+                        <div class="text-center press-heading">
+                            <h2 class="headings">Meet the Fleet</h2>
+                        </div>
+
+                        <div class="nav-fleet container-fluid">
+                            <div class="fleet-nav-holder "><a class="first blue-background fleet-links text-center" href="">All</a></div>
+                            <div class="fleet-nav-holder"><a class="fleet-links text-center" href="">Luxury</a></div>
+                            <div class="fleet-nav-holder"><a class="fleet-links text-center" href="">Pickup</a></div>
+                            <div class="fleet-nav-holder"><a class="fleet-links text-center" href="">Saloon</a></div>
+                            <div class="fleet-nav-holder"><a class="fleet-links text-center" href="">Wagon</a></div>
+                        </div>
+
+                    </div>
+
+                    <div class="fleet-main">
+                        <div class="cars-container container-fluid">
+                            <div class="row cars-row ">
+                                <div class="cars-holder col-md-6 container" data-aos="flip-right" data-aos-duration="1500">
+                                    <img src="images/Ferrari.jpg" alt="car img" class="car-img img-fluid">
+                                    <div class="car-details black container">
+                                        <h5>Ferrari Yellow</h5>
+                                        <table>
+                                            <tr>
+                                                <td class="left-col small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                                <td class="small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                            </tr>
+                                        </table>
+                                        <div class="text-center"><button class="btn  booking-btn">Book now</button></div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cars-holder col-md-6" data-aos="flip-left" data-aos-duration="1500">
+                                    <img src="images/Ferrari.jpg" alt="car img" class="car-img img-fluid">
+                                    <div class="car-details black">
+                                        <h5>Ferrari Yellow</h5>
+                                        <table>
+                                            <tr>
+                                                <td class="left-col small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                                <td class="small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                            </tr>
+                                        </table>
+                                        <div class="text-center"><button class="btn btn-primary blue-background booking-btn">Book now</button></div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="row cars-row">
+                                <div class="cars-holder col-md-6" data-aos="flip-right" data-aos-duration="1500">
+                                    <img src="images/Ferrari.jpg" alt="car img" class="car-img img-fluid">
+                                    <div class="car-details black">
+                                        <h5>Ferrari Yellow</h5>
+                                        <table>
+                                            <tr>
+                                                <td class="left-col small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                                <td class="small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                            </tr>
+                                        </table>
+                                        <div class="text-center"><button class="btn btn-primary blue-background booking-btn">Book now</button></div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cars-holder col-md-6" data-aos="flip-left" data-aos-duration="1500">
+                                    <img src="images/Ferrari.jpg" alt="car img" class="car-img img-fluid">
+                                    <div class="car-details black">
+                                        <h5>Ferrari Yellow</h5>
+                                        <table>
+                                            <tr>
+                                                <td class="left-col small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                                <td class="small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                            </tr>
+                                        </table>
+                                        <div class="text-center"><button class="btn btn-primary blue-background booking-btn">Book now</button></div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="row cars-row">
+                                <div class="cars-holder col-md-6" data-aos="flip-right" data-aos-duration="1500">
+                                    <img src="images/Ferrari.jpg" alt="car img" class="car-img img-fluid">
+                                    <div class="car-details black">
+                                        <h5>Ferrari Yellow</h5>
+                                        <table>
+                                            <tr>
+                                                <td class="left-col small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                                <td class="small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                            </tr>
+                                        </table>
+                                        <div class="text-center"><button class="btn btn-primary blue-background booking-btn">Book now</button></div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cars-holder col-md-6" data-aos="flip-left" data-aos-duration="1500">
+                                    <img src="images/Ferrari.jpg" alt="car img" class="car-img img-fluid">
+                                    <div class="car-details black">
+                                        <h5>Ferrari Yellow</h5>
+                                        <table>
+                                            <tr>
+                                                <td class="left-col small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                                <td class="small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                            </tr>
+                                        </table>
+                                        <div class="text-center view-div"><button class="btn btn-primary blue-background booking-btn">Book now</button></div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="text-center"><button class="btn btn-primary  view-btn">View&nbsp;more</button></div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- drivers section -->
+                <section class="sections team">
+                    <div class="team-top">
+                        <div class="text-center press-heading">
+                            <h2 class="headings">Meet our professional drivers</h2>
+                        </div>
+                    </div>
+
+                    <div class="team-main container-fluid">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="container-fluid team-carousel">
+                                            <div class="row team-row">
+                                                <div class="team-cards col-lg-4 col-md-6">
+                                                    <div class="team-divs">
+                                                        <img src="images/driver.jpg" alt="" class="team-img img-fluid">
+                                                        <div class="team-description text-center">
+                                                            <h3 class="blue">Johnny Doe</h3>
+                                                            <p class="small-text grey">UK Shuttle Driver</p>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                                <div class="team-cards col-lg-4 col-md-6 carousel-sm">
+                                                    <div class="team-divs">
+                                                        <img src="images/driver.jpg" alt="" class="team-img img-fluid">
+                                                        <div class="team-description text-center">
+                                                            <h3 class="blue">Johnny Doe</h3>
+                                                            <p class="small-text grey">UK Shuttle Driver</p>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                                <div class="team-cards col-lg-4 col-md-6 carousel-med">
+                                                    <div class="team-divs " id="team-last">
+                                                        <img src="images/driver.jpg" alt="" class="team-img img-fluid">
+                                                        <div class="team-description text-center">
+                                                            <h3 class="blue">Johnny Doe</h3>
+                                                            <p class="small-text grey">UK Shuttle Driver</p>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="container-fluid team-carousel">
+                                            <div class="row team-row">
+                                                <div class="team-cards col-lg-4 col-md-6">
+                                                    <div class="team-divs">
+                                                        <img src="images/driver.jpg" alt="" class="team-img img-fluid">
+                                                        <div class="team-description text-center">
+                                                            <h3 class="blue">Johnny Doe</h3>
+                                                            <p class="small-text grey">UK Shuttle Driver</p>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                                <div class="team-cards col-lg-4 col-md-6 carousel-sm">
+                                                    <div class="team-divs">
+                                                        <img src="images/driver.jpg" alt="" class="team-img img-fluid">
+                                                        <div class="team-description text-center">
+                                                            <h3 class="blue">Johnny Doe</h3>
+                                                            <p class="small-text grey">UK Shuttle Driver</p>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                                <div class="team-cards col-lg-4 col-md-6 carousel-med">
+                                                    <div class="team-divs " id="team-last">
+                                                        <img src="images/driver.jpg" alt="" class="team-img img-fluid">
+                                                        <div class="team-description text-center">
+                                                            <h3 class="blue">Johnny Doe</h3>
+                                                            <p class="small-text grey">UK Shuttle Driver</p>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="carousel-item">
+
+                                        <div class="container-fluid team-carousel">
+                                            <div class="row team-row">
+                                                <div class="team-cards col-lg-4 col-md-6">
+                                                    <div class="team-divs">
+                                                        <img src="images/driver.jpg" alt="" class="team-img img-fluid">
+                                                        <div class="team-description text-center">
+                                                            <h3 class="blue">Johnny Doe</h3>
+                                                            <p class="small-text grey">UK Shuttle Driver</p>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                                <div class="team-cards col-lg-4 col-md-6 carousel-sm">
+                                                    <div class="team-divs">
+                                                        <img src="images/driver.jpg" alt="" class="team-img img-fluid">
+                                                        <div class="team-description text-center">
+                                                            <h3 class="blue">Johnny Doe</h3>
+                                                            <p class="small-text grey">UK Shuttle Driver</p>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                                <div class="team-cards col-lg-4 col-md-6 carousel-med">
+                                                    <div class="team-divs " id="team-last">
+                                                        <img src="images/driver.jpg" alt="" class="team-img img-fluid">
+                                                        <div class="team-description text-center">
+                                                            <h3 class="blue">Johnny Doe</h3>
+                                                            <p class="small-text grey">UK Shuttle Driver</p>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                    <i class="blue fas fa-caret-left carousel-icons" aria-hidden="true"></i>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                    <i class=" blue fas fa-caret-right carousel-icons" aria-hidden="true"></i>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- Gallery section -->
+                <section class=" gallery">
+                    <div class="text-center press-heading gallery-heading">
+                        <h2 class="headings gallery-heading">Gallery</h2>
+                    </div>
+                    <div class="container-fluid gallery-container">
+                        <div class="img1 img-holder">
+                            <a href="images/gallery1.jpg"><img src="images/gallery1.jpg" alt="" class="gallery-img img-fluid "></a>
+
+                        </div>
+                        <div class="img2 img-holder">
+                            <a href="images/gallery2.jpg"><img src="images/gallery2.jpg" alt="" class="gallery-img img-fluid"></a>
+
+                        </div>
+                        <div class="img3 img-holder">
+                            <a href="images/gallery3.jpg"><img src="images/gallery3.jpg" alt="" class="gallery-img img-fluid"></a>
+
+                        </div>
+                        <div class="img4 img-holder">
+                            <a href="images/gallery4.jpg"><img src="images/gallery4.jpg" alt="" class="gallery-img img-fluid"></a>
+
+                        </div>
+                        <div class="img5 img-holder">
+                            <a href="images/gallery5.jpg"><img src="images/gallery5.jpg" alt="" class="gallery-img img-fluid"></a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="container-fluid gallery-container-sm">
+                        <div class="img1-sm img-holder">
+                            <a href="images/gallery1.jpg"><img src="images/gallery1.jpg" alt="" class="gallery-img img-fluid "></a>
+
+                        </div>
+                        <div class="img2-sm img-holder">
+                            <a href="images/gallery2.jpg"><img src="images/gallery2.jpg" alt="" class="gallery-img img-fluid"></a>
+                        </div>
+                        <div class="img3-sm img-holder">
+                            <a href="images/gallery3.jpg"><img src="images/gallery3.jpg" alt="" class="gallery-img img-fluid"></a>
+
+                        </div>
+                        <div class="img4-sm img-holder">
+                            <a href="images/gallery4.jpg"><img src="images/gallery4.jpg" alt="" class="gallery-img img-fluid"></a>
+
+                        </div>
+                        <div class="img5-sm img-holder">
+                            <a href="images/gallery5.jpg"><img src="images/gallery5.jpg" alt="" class="gallery-img img-fluid"></a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="text-center gallery-view"><button class="btn  view-btn">View&nbsp;more</button></div>
+
+                </section>
+
+                <!-- testimonials section -->
+                <section class="sections testimonials">
+                   
+                    <div class="container-fluid">
+                        <div class="testimonials-top">
+                            <div class="text-center press-heading">
+                                <h2 class="headings review-header">Customer reviews</h2>
+                                <p class="text-center"><i class="blue fas fa-circle"></i></p>
+                            </div>
+                        </div>
+    
+                        <div class="my-slider container-fluid text-center" >
+                            <div class="rev-carousel-card text-center">
+                                <div class="rev-carousel-inner text-center">
+                                    <div class="img-div text-center">
+                                        <img src="images/dev.jpg" alt="" class="rev-img img-fluid">
+
+                                    </div>
+                                    <div class="rev-text black">
+                                        <p class="rev-header font-weight-bold small-text">Johnny Doe</p>
+                                        <p class="rev-small grey">Software Developer</p>
+                                        <p class="rev-text small-text">There are two types of people, those<br>  who listen welland those who prefer 
+                                            not to There are <br> two types of people, those who listen well and <br> those who prefer not to speakspeak</p>
+                                        
+                                    </div>
+                                    
+
+                                </div>
+                            </div>
+                            <div class="rev-carousel-card text-center">
+                                <div class="rev-carousel-inner text-center">
+                                    <div class="img-div text-center">
+                                        <img src="images/dev.jpg" alt="" class="rev-img img-fluid">
+
+                                    </div>
+                                    <div class="rev-text black">
+                                        <p class="rev-header font-weight-bold small-text">Johnny Doe</p>
+                                        <p class="rev-small grey">Software Developer</p>
+                                        <p class="rev-text small-text">There are two types of people, those<br>  who listen welland those who prefer 
+                                            not to There are <br> two types of people, those who listen well and <br> those who prefer not to speakspeak</p>
+
+                                    </div>
+                                    
+
+                                </div>
+                            </div>
+                            <div class="rev-carousel-card text-center">
+                                <div class="rev-carousel-inner text-center">
+                                    <div class="img-div text-center">
+                                        <img src="images/dev.jpg" alt="" class="rev-img img-fluid">
+
+                                    </div>
+                                    <div class="rev-text black">
+                                        <p class="rev-header font-weight-bold small-text">Johnny Doe</p>
+                                        <p class="rev-small grey">Software Developer</p>
+                                        <p class="rev-text small-text">There are two types of people, those<br>  who listen welland those who prefer 
+                                            not to There are <br> two types of people, those who listen well and <br> those who prefer not to speakspeak</p>
+                                        
+
+                                    </div>
+                                    
+
+                                </div>
+                            </div>
+                            
+                           
+
+                            
+                        </div>
+                    </div>
+
+
+                </section>
+
+                <!-- cta section -->
+                <section class=" cta">
+
+                    <div class="container-fluid text-center cta-container">
+                        <div class="  cta-heading">
+                            <h2 class="headings">Zuri Chauffeur.</h2>
+                        </div>
+                        <div class="cta-text">
+                            <h1 class="font-weight-bold">Never miss a deal</h1>
+                            <p class="small-text">There are two types of people, those who listen well and those who prefer not to speak</p>
+                        </div>
+                        <form>
+                            <div class="form-row row">
+                                <div class="col-lg-8 col-md-6">
+                                    <input type="text" class="form-control email-input small-text grey" placeholder="Your Email Address">
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <input type="submit" class="font-weight-bold form-control small-text subscribe-btn btn-primary btn" placeholder="Subscribe" value="Subscribe">
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+
+                </section>
+
+
+                <!-- contact us section -->
+                <section class="sections contact-section " id="contact">
+                    <div class="container-fluid">
+                        <div class="row contact-row">
+                            <div class="col-md-6 contact-card" data-aos="fade-down-right" data-aos-duration="1500">
+                                <div class="text-left contact-heading ">
+                                    <h2 class="headings ">Send us a message</h2>
+                                </div>
+
+                                <form>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control small-text grey" id="name" placeholder="Name">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="email" class="form-control small-text grey" id="email" placeholder="Email">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <textarea class="form-control small-text grey" id="message" rows="3" placeholder="Message"></textarea>
+                                    </div>
+
+                                    <div class=""><button class="btn booking-btn about-btn submit-btn">Submit</button></div>
+                                </form>
+
+                            </div>
+
+                            <div class="address-card col-md-6" data-aos="fade-down-left" data-aos-duration="1500">
+                                <div class="address-holder blue">
+                                    <div class="address-flex">
+                                        <div class="contact-holder"><img src="images/phone.svg" alt="" class="contact-icons"></div>
+                                        <div class="details-holder"><p class="small-text">+123 456 789 0</p></div>
+
+                                    </div>
+                                    <div class="address-flex">
+                                        <div class="contact-holder"><img src="images/envelope.svg" alt="" class="contact-icons"></div>
+                                        <div class="details-holder"><p class="small-text">zurichauffeur@mail.com</p></div>
+
+                                    </div>
+                                    <div class="address-flex">
+                                        <div class="contact-holder"><img src="images/locator.svg" alt="" class="contact-icons"></div>
+                                        <div class="details-holder"><p class="small-text">22 Kentucky Avenue</p></div>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                            
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- map section -->
+                <section class="map container-fluid">
+                    <div >
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35001.509985842924!2d-94.57262825623052!3d39.15822159647646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0f9f7d738c99f%3A0xd34b57accd1c4148!2sNorth%20Kansas%20City%20Hospital!5e0!3m2!1sen!2sng!4v1593661548503!5m2!1sen!2sng" width="100%" height="550" frameborder="0" style="border:0;padding: 0;margin: 0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+
+                </section>
+
+                
+                
+      
+            </main>
+    
+            <footer class=" footer-section">
+                <div class="container-fluid" data-aos="flip-up" data-aos-duration="1500">
+                    <div class="row footer-row sections">
+                        <div class="footer-card col-md-6 col-lg-3">
+                            <div class="  footer-heading">
+                                <h2 class="headings">Zuri Chauffeur.</h2>
+                            </div>
+                            <div class="footer-text">
+                                <p class="small-text ">There are two types of people, those who listen well 
+                                    and those who prefer not to speak. There are two types of people, 
+                                    those who listen well and those who prefer not to speak.</p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="footer-card col-md-6 col-lg-3 company-div">
+                            <div class="  footer-heading footer-other">
+                                <p class="small-text font-weight-bold">Company</p>
+                            </div>
+                            <div class="footer-text">
+                                <a class="quick footer-links small-text" href="#about">About&nbsp;Us</a>
+                                <a class="quick footer-links small-text" href="#services">Service</a>
+                                <a class="quick footer-links small-text "href="#cars">Our&nbsp;Cars</a>
+                                <a class="quick footer-links small-text" href="#contact">Contact</a>
+
+                            </div>
+
+                        </div>
+                        <div class="footer-card col-md-6 col-lg-3">
+                            <div class="  footer-heading footer-other">
+                                <p class="small-text font-weight-bold">Contact&nbsp;Us</p>
+                            </div>
+                            <div class="footer-text">
+                                <p class="small-text">22 Kentucky Avenue</p>
+                                <p class="small-text">+123 456 789 0</p>
+                                <p class="small-text">zurichauffeur@mail.com</p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="footer-card col-md-6 col-lg-3">
+                            <div class="  footer-heading footer-other">
+                                <p class="small-text font-weight-bold">Follow&nbsp;Us</p>
+                            </div>
+                            <div class="footer-text">
+                                <div class="footer-sm ">
+                                    <div class=""><i class="uil uil-instagram-alt sm-icons white"></i></div>
+                                    <div class=""><i class="uil uil-facebook sm-icons white"></i></div>
+                                    <div class=""><i class="uil uil-linkedin sm-icons white"></i></div>
+                                    <div class=""><i class="uil uil-twitter sm-icons white"></i></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="copyrights">
+                        <p class="text-center  small-text">Copyright © 2020. <span class="font-weight-bold">Zuri Chauffeur.</span> All rights reserved</p>
+                    </div>
+
+                </div>
+                
+            </footer>
+    
+    
+            <!-- jquery script -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="jquery/jquery-3.4.1.min.js"></script>
+        
+
+            <!-- bootstrap script -->
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+            <script src="bootstrap/js/bootstrap.min.js"></script>
+    
+            <!-- Aos animation script -->
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+                AOS.init();
+            </script>
+    
+            <script type="text/javascript" src="lightbox/simple-lightbox.js"></script>
+            <script type="text/javascript" src="js/index.js"></script>
+            <!-- tiny slider carousel link -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+
+            <script type="text/javascript">
+                    //initialize tiny slider    
+                    let slider = tns({
+                    "container": ".my-slider",
+                    "items": 1,
+                    "slideBy": 1,
+                    "autoplay":true,
+                    "autoplayButtonOutput": false,
+                    "autoplayHoverPause": true,
+                    "loop": true,
+                    "mouseDrag": true,
+                    "controls": false,
+                    "navPosition": "bottom",
+                    "nav": true,
+                    "center":true,
+                    "swipeAngle": false,
+                    "speed": 3000,
+                    });
+            </script>
+        
+            
+
+    
+        </div>
+    </body>
+
+</html>
