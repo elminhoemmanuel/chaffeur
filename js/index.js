@@ -22,6 +22,8 @@ $(document).ready(function(){
       });
 
       $(".closers").click(function(){
+        $(".icon").removeClass("uil-times");
+        $(".icon").addClass("uil-bars");
         $(".nav-sm-dropdown").css("width","0");
         $(".nav-sm-dropdown .nav-holder").css("display","none");
       });
