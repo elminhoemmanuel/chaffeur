@@ -29,6 +29,66 @@ $(document).ready(function(){
       });
 
 
+      // HANDLE car fleet section
+
+      $(".luxury").click(function(){
+        $("#all").addClass("hide");
+        $("#pickup").addClass("hide");
+        $("#wagon").addClass("hide");
+        $("#saloon").addClass("hide");
+        $("#luxury").removeClass("hide");
+      })
+
+      $(".all").click(function(){
+        $("#luxury").addClass("hide");
+        $("#pickup").addClass("hide");
+        $("#wagon").addClass("hide");
+        $("#saloon").addClass("hide");
+        $("#all").removeClass("hide");
+      })
+
+      $(".pickup").click(function(){
+        $("#all").addClass("hide");
+        $("#luxury").addClass("hide");
+        $("#wagon").addClass("hide");
+        $("#saloon").addClass("hide");
+        $("#pickup").removeClass("hide");
+      })
+
+      $(".wagon").click(function(){
+        $("#all").addClass("hide");
+        $("#luxury").addClass("hide");
+        $("#pickup").addClass("hide");
+        $("#saloon").addClass("hide");
+        $("#wagon").removeClass("hide");
+      })
+
+      $(".saloon").click(function(){
+        $("#all").addClass("hide");
+        $("#luxury").addClass("hide");
+        $("#pickup").addClass("hide");
+        $("#wagon").addClass("hide");
+        $("#saloon").removeClass("hide");
+      })
+
+      
+
+
+      // handle nav links
+      // $(".nav-lg a").css({
+      //   "border-top": "65px solid transparent", 
+      //   "margin-top": "-65px",
+      //   "-webkit-background-clip": "65px solid transparent",
+      //   "border-top": "65px solid transparent",
+      //   "border-top": "65px solid transparent"
+
+      // });
+
+
+
+     
+
+
 
     // handle shadow for bavbar scroll
     var navLarge = $('.nav-lg'); 

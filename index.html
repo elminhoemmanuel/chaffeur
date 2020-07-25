@@ -29,6 +29,15 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.helper.ie8.js"></script>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+       
+
         <!-- AOS link -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         
@@ -36,7 +45,8 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
         
 
-
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
         <title>ZuriChaffeur</title>
 
@@ -48,95 +58,7 @@
 
         <div class="wrapper">
 
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                   
-                    <div class="modal-body">
-                        
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class=" col-md-12 col-sm-12 booking-holder ">
-                                
-                                    <div class="booking-div scale">
-                                         <div class="text-center booking-header ">
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                              </button>
-                                             <h2 class="blue">Car&nbsp;booking </h2>
-                                             
-                                         </div>
-                                         <div class="booking-details">
-                                             <form class="pickup-form">
-                                                 <p class="pickup-header">Pickup</p>
-                                                 <div class="form-group">
-                                                     <label for="inputPickup" class="labels">Address</label>
-                                                     <input type="text" class="form-control" id="inputPickup" placeholder="Your preferred pickup location">
-                                                 </div>
-                                                 <div class="form-row">
-                                                 <div class="form-group col-md-6">
-                                                     <img src="images/calendar.svg" alt="" class="calendar book-icons">
-                                                     <label for="inputPickupDate" class="labels">Date</label>
-                                                     <input type="date" class="form-control" id="inputPickupDate" placeholder="Date">
-                                                 </div>
-                                                 <div class="form-group col-md-6">
-                                                     <img src="images/clock.svg" alt="" class="clock book-icons">
-                                                     <label for="inputPickupTime" class="labels">Time</label>
-                                                     <input  type="text" class="form-control" id="inputPickupTime" placeholder="8 AM">
-                                                 </div>
-                                                 </div>
-                                                 
-                                                 
-                                             </form>
-        
-                                             <form class="dropoff-form">
-                                                 <p class="pickup-header">Dropoff</p>
-                                                 <div class="form-group">
-                                                     <label for="inputDropoff" class="labels">Address</label>
-                                                     <input type="text" class="form-control" id="inputDropoff" placeholder="Your preferred pickup location">
-                                                 </div>
-                                                 <div class="form-row">
-                                                 <div class="form-group col-md-6">
-                                                     <img src="images/calendar.svg" alt="" class="calendar book-icons">
-                                                     <label for="inputDropoffDate" class="labels">Date</label>
-                                                     <input type="date" class="form-control" id="inputDropoffDate" placeholder="Date">
-                                                 </div>
-                                                 <div class="form-group col-md-6">
-                                                     <img src="images/clock.svg" alt="" class="clock book-icons">
-                                                     <label for="inputDropoffTime" class="labels">Time</label>
-                                                     <input  type="text" class="form-control" id="inputDropoffTime" placeholder="8 AM">
-                                                 </div>
-                                                 </div>
-                                                 
-                                                 
-                                             </form>
-        
-                                             <div class="form-group" >
-                                                 <div class="form-check">
-                                                 <input class="form-check-input" type="checkbox" id="return">
-                                                 <label class="form-check-label " for="return" id="return">
-                                                     Return to pickup location
-                                                 </label>
-                                                 </div>
-                                             </div>
-                                             <div class="text-center"><button class="btn  booking-btn">Book now</button></div>
-        
-                                         </div>
-                                    </div>
-        
-                                 
-        
-                                </div>
-
-                            </div>
-
-                        </div>
-                        
-                    </div>
-                    
-                
-                </div>
-            </div>
-
+            
             <!-- header section -->
             <header id="home" class="">
                 <div class="header-container">
@@ -152,9 +74,9 @@
                         </div>
                         <div class="nav-sm">
                             <div class="brand-holder"><a href="#home"><img class="logo" src="images/logo.svg" alt="logo"></a></div>
-                            <div class=" droper"><a href="#"><i class="uil uil-bars icon bars"></i></a></div>
+                            <div class="droper"><i class="uil uil-bars icon bars"></i></div>
                         </div>
-                        <div class="nav-sm-dropdown">
+                        <div class="nav-sm-dropdown" id="small-nav">
                             <div id="alt" class="nav-holder text-center "><a  class="closers" href="#home">Home</a></div>
                             <div class="nav-holder text-center"><a class="closers" href="#services">Services</a></div>
                             <div id="alt" class="nav-holder text-center "><a  class="closers" href="#about">About</a></div>
@@ -167,17 +89,17 @@
                     <div class="hero-holder container-fluid" data-aos="fade-right" data-aos-duration="1500">
                         <h1 class="font-weight-bold">Your favorite<br>Chauffeur service hub</h1>
                         <p>Best friendly driver’s experience in the world</p>
-                        <a href="#services" class="btn book-btn lg-modal" >Book a car</a>
-                        <a href="#services" class="btn book-btn sm-modal" >Book a car</a>
+                        <a href="#home" class="btn book-btn lg-modal" >Book a car</a>
+                        <a href="#home" class="btn book-btn sm-modal" >Book a car</a>
 
                     </div>
 
                     <!-- social media handles container -->
                     <div class="sm-holder " data-aos="fade-left" data-aos-duration="1500">
-                        <div class="icon-holder"><i class="uil uil-linkedin sm-icons white"></i></div>
-                        <div class="icon-holder"><i class="uil uil-instagram-alt sm-icons white"></i></div>
-                        <div class="icon-holder"><i class="uil uil-facebook sm-icons white"></i></div>
-                        <div class="icon-holder"><i class="uil uil-twitter sm-icons white"></i></div>
+                        <div class="icon-holder"><a href="#home"><i class="uil uil-linkedin sm-icons white"></i></a></div>
+                        <div class="icon-holder"><a href="#home"><i class="uil uil-instagram-alt sm-icons white"></i></a></div>
+                        <div class="icon-holder"><a href="#home"><i class="uil uil-facebook sm-icons white"></i></a></div>
+                        <div class="icon-holder"><a href="#home"><i class="uil uil-twitter sm-icons white"></i></a></div>
                     </div>
 
                 </div>
@@ -204,16 +126,18 @@
                                                     <label for="inputPickup" class="labels">Address</label>
                                                     <input type="text" class="form-control" id="inputPickup" placeholder="Your preferred pickup location">
                                                 </div>
+
+                                                
+                                                
                                                 <div class="form-row">
                                                 <div class="form-group col-md-6">
-                                                    <img src="images/calendar.svg" alt="" class="calendar book-icons">
                                                     <label for="inputPickupDate" class="labels">Date</label>
-                                                    <input type="date" class="form-control" id="inputPickupDate" placeholder="Date">
+                                                    <input type="date" class="form-control" id="inputPickupDate" placeholder="">
                                                 </div>
+                                               
                                                 <div class="form-group col-md-6">
-                                                    <img src="images/clock.svg" alt="" class="clock book-icons">
                                                     <label for="inputPickupTime" class="labels">Time</label>
-                                                    <input  type="text" class="form-control" id="inputPickupTime" placeholder="8 AM">
+                                                    <input  type="time" class="form-control" id="inputPickupTime" placeholder="8 AM">
                                                 </div>
                                                 </div>
                                                 
@@ -228,14 +152,14 @@
                                                 </div>
                                                 <div class="form-row">
                                                 <div class="form-group col-md-6">
-                                                    <img src="images/calendar.svg" alt="" class="calendar book-icons">
+                                                    
                                                     <label for="inputDropoffDate" class="labels">Date</label>
                                                     <input type="date" class="form-control" id="inputDropoffDate" placeholder="Date">
                                                 </div>
                                                 <div class="form-group col-md-6">
-                                                    <img src="images/clock.svg" alt="" class="clock book-icons">
+                                                    
                                                     <label for="inputDropoffTime" class="labels">Time</label>
-                                                    <input  type="text" class="form-control" id="inputDropoffTime" placeholder="8 AM">
+                                                    <input  type="time" class="form-control" id="inputDropoffTime" placeholder="8 AM">
                                                 </div>
                                                 </div>
                                                 
@@ -407,9 +331,8 @@
                             </div>
 
                             <div class="col-md-6 about-pic-holder" data-aos="fade-down-left" data-aos-duration="1500">
-                                <img src="images/about.jpg" alt="" class="about-img img-fluid">
-                                <img src="images/play.svg" alt="" class="play-icon">
-
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/77u0Enf-LjY" frameborder="0" 
+                                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
 
                         </div>
@@ -460,26 +383,26 @@
                 <!-- car fleet section -->
                 <section class="sections fleet" id="cars">
                     <div class="fleet-top">
-                        <div class="text-center press-heading">
+                        <div class="text-center press-heading" id="press">
                             <h2 class="headings">Meet the Fleet</h2>
                         </div>
 
                         <div class="nav-fleet container-fluid">
-                            <div class="fleet-nav-holder "><a class="first blue-background fleet-links text-center" href="">All</a></div>
-                            <div class="fleet-nav-holder"><a class="fleet-links text-center" href="">Luxury</a></div>
-                            <div class="fleet-nav-holder"><a class="fleet-links text-center" href="">Pickup</a></div>
-                            <div class="fleet-nav-holder"><a class="fleet-links text-center" href="">Saloon</a></div>
-                            <div class="fleet-nav-holder"><a class="fleet-links text-center" href="">Wagon</a></div>
+                            <div class="fleet-nav-holder "><a class="first blue-background fleet-links text-center all" href="#press">All</a></div>
+                            <div class="fleet-nav-holder"><a class="fleet-links text-center luxury" href="#press">Luxury</a></div>
+                            <div class="fleet-nav-holder"><a class="fleet-links text-center pickup" href="#press">Pickup</a></div>
+                            <div class="fleet-nav-holder"><a class="fleet-links text-center saloon" href="#press">Saloon</a></div>
+                            <div class="fleet-nav-holder"><a class="fleet-links text-center wagon" href="#press">Wagon</a></div>
                         </div>
 
                     </div>
 
-                    <div class="fleet-main">
+                    <div class="fleet-main" id="all">
                         <div class="cars-container container-fluid">
-                            <div class="row cars-row ">
-                                <div class="cars-holder col-md-6 container" data-aos="flip-right" data-aos-duration="1500">
+                            <div class="row cars-row " >
+                                <div class="cars-holder col-md-6" data-aos="flip-right" data-aos-duration="1500">
                                     <img src="images/Ferrari.jpg" alt="car img" class="car-img img-fluid">
-                                    <div class="car-details black container">
+                                    <div class="car-details black">
                                         <h5>Ferrari Yellow</h5>
                                         <table>
                                             <tr>
@@ -487,7 +410,459 @@
                                                 <td class="small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
                                             </tr>
                                         </table>
-                                        <div class="text-center"><button class="btn  booking-btn">Book now</button></div>
+                                        <div class="text-center"><button class="btn btn-primary blue-background booking-btn">Book now</button></div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cars-holder col-md-6" data-aos="flip-left" data-aos-duration="1500">
+                                    <img src="images/Ferrari.jpg" alt="car img" class="car-img img-fluid">
+                                    <div class="car-details black">
+                                        <h5>Ferrari Yellow</h5>
+                                        <table>
+                                            <tr>
+                                                <td class="left-col small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                                <td class="small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                            </tr>
+                                        </table>
+                                        <div class="text-center"><button class="btn btn-primary blue-background booking-btn">Book now</button></div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="row cars-row">
+                                <div class="cars-holder col-md-6" data-aos="flip-right" data-aos-duration="1500">
+                                    <img src="images/Ferrari.jpg" alt="car img" class="car-img img-fluid">
+                                    <div class="car-details black">
+                                        <h5>Ferrari Yellow</h5>
+                                        <table>
+                                            <tr>
+                                                <td class="left-col small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                                <td class="small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                            </tr>
+                                        </table>
+                                        <div class="text-center"><button class="btn btn-primary blue-background booking-btn">Book now</button></div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cars-holder col-md-6" data-aos="flip-left" data-aos-duration="1500">
+                                    <img src="images/Ferrari.jpg" alt="car img" class="car-img img-fluid">
+                                    <div class="car-details black">
+                                        <h5>Ferrari Yellow</h5>
+                                        <table>
+                                            <tr>
+                                                <td class="left-col small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                                <td class="small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                            </tr>
+                                        </table>
+                                        <div class="text-center"><button class="btn btn-primary blue-background booking-btn">Book now</button></div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="row cars-row">
+                                <div class="cars-holder col-md-6" data-aos="flip-right" data-aos-duration="1500">
+                                    <img src="images/Ferrari.jpg" alt="car img" class="car-img img-fluid">
+                                    <div class="car-details black">
+                                        <h5>Ferrari Yellow</h5>
+                                        <table>
+                                            <tr>
+                                                <td class="left-col small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                                <td class="small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                            </tr>
+                                        </table>
+                                        <div class="text-center"><button class="btn btn-primary blue-background booking-btn">Book now</button></div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cars-holder col-md-6" data-aos="flip-left" data-aos-duration="1500">
+                                    <img src="images/Ferrari.jpg" alt="car img" class="car-img img-fluid">
+                                    <div class="car-details black">
+                                        <h5>Ferrari Yellow</h5>
+                                        <table>
+                                            <tr>
+                                                <td class="left-col small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                                <td class="small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                            </tr>
+                                        </table>
+                                        <div class="text-center view-div"><button class="btn btn-primary blue-background booking-btn">Book now</button></div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="text-center"><button class="btn btn-primary  view-btn">View&nbsp;more</button></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="fleet-main hide" id="luxury" >
+                        <div class="cars-container container-fluid">
+                            <div class="row cars-row " >
+                                <div class="cars-holder col-md-6" data-aos="flip-right" data-aos-duration="1500">
+                                    <img src="images/Ferrari.jpg" alt="car img" class="car-img img-fluid">
+                                    <div class="car-details black">
+                                        <h5>Ferrari Yellow lux</h5>
+                                        <table>
+                                            <tr>
+                                                <td class="left-col small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                                <td class="small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                            </tr>
+                                        </table>
+                                        <div class="text-center"><button class="btn btn-primary blue-background booking-btn">Book now</button></div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cars-holder col-md-6" data-aos="flip-left" data-aos-duration="1500">
+                                    <img src="images/Ferrari.jpg" alt="car img" class="car-img img-fluid">
+                                    <div class="car-details black">
+                                        <h5>Ferrari Yellow</h5>
+                                        <table>
+                                            <tr>
+                                                <td class="left-col small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                                <td class="small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                            </tr>
+                                        </table>
+                                        <div class="text-center"><button class="btn btn-primary blue-background booking-btn">Book now</button></div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="row cars-row">
+                                <div class="cars-holder col-md-6" data-aos="flip-right" data-aos-duration="1500">
+                                    <img src="images/Ferrari.jpg" alt="car img" class="car-img img-fluid">
+                                    <div class="car-details black">
+                                        <h5>Ferrari Yellow</h5>
+                                        <table>
+                                            <tr>
+                                                <td class="left-col small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                                <td class="small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                            </tr>
+                                        </table>
+                                        <div class="text-center"><button class="btn btn-primary blue-background booking-btn">Book now</button></div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cars-holder col-md-6" data-aos="flip-left" data-aos-duration="1500">
+                                    <img src="images/Ferrari.jpg" alt="car img" class="car-img img-fluid">
+                                    <div class="car-details black">
+                                        <h5>Ferrari Yellow</h5>
+                                        <table>
+                                            <tr>
+                                                <td class="left-col small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                                <td class="small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                            </tr>
+                                        </table>
+                                        <div class="text-center"><button class="btn btn-primary blue-background booking-btn">Book now</button></div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="row cars-row">
+                                <div class="cars-holder col-md-6" data-aos="flip-right" data-aos-duration="1500">
+                                    <img src="images/Ferrari.jpg" alt="car img" class="car-img img-fluid">
+                                    <div class="car-details black">
+                                        <h5>Ferrari Yellow</h5>
+                                        <table>
+                                            <tr>
+                                                <td class="left-col small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                                <td class="small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                            </tr>
+                                        </table>
+                                        <div class="text-center"><button class="btn btn-primary blue-background booking-btn">Book now</button></div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cars-holder col-md-6" data-aos="flip-left" data-aos-duration="1500">
+                                    <img src="images/Ferrari.jpg" alt="car img" class="car-img img-fluid">
+                                    <div class="car-details black">
+                                        <h5>Ferrari Yellow</h5>
+                                        <table>
+                                            <tr>
+                                                <td class="left-col small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                                <td class="small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                            </tr>
+                                        </table>
+                                        <div class="text-center view-div"><button class="btn btn-primary blue-background booking-btn">Book now</button></div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="text-center"><button class="btn btn-primary  view-btn">View&nbsp;more</button></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="fleet-main hide" id="pickup" >
+                        <div class="cars-container container-fluid">
+                            <div class="row cars-row " >
+                                <div class="cars-holder col-md-6" data-aos="flip-right" data-aos-duration="1500">
+                                    <img src="images/Ferrari.jpg" alt="car img" class="car-img img-fluid">
+                                    <div class="car-details black">
+                                        <h5>Ferrari Yellow</h5>
+                                        <table>
+                                            <tr>
+                                                <td class="left-col small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                                <td class="small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                            </tr>
+                                        </table>
+                                        <div class="text-center"><button class="btn btn-primary blue-background booking-btn">Book now</button></div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cars-holder col-md-6" data-aos="flip-left" data-aos-duration="1500">
+                                    <img src="images/Ferrari.jpg" alt="car img" class="car-img img-fluid">
+                                    <div class="car-details black">
+                                        <h5>Ferrari Yellow</h5>
+                                        <table>
+                                            <tr>
+                                                <td class="left-col small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                                <td class="small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                            </tr>
+                                        </table>
+                                        <div class="text-center"><button class="btn btn-primary blue-background booking-btn">Book now</button></div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="row cars-row">
+                                <div class="cars-holder col-md-6" data-aos="flip-right" data-aos-duration="1500">
+                                    <img src="images/Ferrari.jpg" alt="car img" class="car-img img-fluid">
+                                    <div class="car-details black">
+                                        <h5>Ferrari Yellow</h5>
+                                        <table>
+                                            <tr>
+                                                <td class="left-col small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                                <td class="small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                            </tr>
+                                        </table>
+                                        <div class="text-center"><button class="btn btn-primary blue-background booking-btn">Book now</button></div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cars-holder col-md-6" data-aos="flip-left" data-aos-duration="1500">
+                                    <img src="images/Ferrari.jpg" alt="car img" class="car-img img-fluid">
+                                    <div class="car-details black">
+                                        <h5>Ferrari Yellow</h5>
+                                        <table>
+                                            <tr>
+                                                <td class="left-col small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                                <td class="small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                            </tr>
+                                        </table>
+                                        <div class="text-center"><button class="btn btn-primary blue-background booking-btn">Book now</button></div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="row cars-row">
+                                <div class="cars-holder col-md-6" data-aos="flip-right" data-aos-duration="1500">
+                                    <img src="images/Ferrari.jpg" alt="car img" class="car-img img-fluid">
+                                    <div class="car-details black">
+                                        <h5>Ferrari Yellow</h5>
+                                        <table>
+                                            <tr>
+                                                <td class="left-col small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                                <td class="small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                            </tr>
+                                        </table>
+                                        <div class="text-center"><button class="btn btn-primary blue-background booking-btn">Book now</button></div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cars-holder col-md-6" data-aos="flip-left" data-aos-duration="1500">
+                                    <img src="images/Ferrari.jpg" alt="car img" class="car-img img-fluid">
+                                    <div class="car-details black">
+                                        <h5>Ferrari Yellow</h5>
+                                        <table>
+                                            <tr>
+                                                <td class="left-col small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                                <td class="small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                            </tr>
+                                        </table>
+                                        <div class="text-center view-div"><button class="btn btn-primary blue-background booking-btn">Book now</button></div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="text-center"><button class="btn btn-primary  view-btn">View&nbsp;more</button></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="fleet-main hide" id="saloon" >
+                        <div class="cars-container container-fluid">
+                            <div class="row cars-row " >
+                                <div class="cars-holder col-md-6" data-aos="flip-right" data-aos-duration="1500">
+                                    <img src="images/Ferrari.jpg" alt="car img" class="car-img img-fluid">
+                                    <div class="car-details black">
+                                        <h5>Ferrari Yellow </h5>
+                                        <table>
+                                            <tr>
+                                                <td class="left-col small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                                <td class="small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                            </tr>
+                                        </table>
+                                        <div class="text-center"><button class="btn btn-primary blue-background booking-btn">Book now</button></div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cars-holder col-md-6" data-aos="flip-left" data-aos-duration="1500">
+                                    <img src="images/Ferrari.jpg" alt="car img" class="car-img img-fluid">
+                                    <div class="car-details black">
+                                        <h5>Ferrari Yellow</h5>
+                                        <table>
+                                            <tr>
+                                                <td class="left-col small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                                <td class="small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                            </tr>
+                                        </table>
+                                        <div class="text-center"><button class="btn btn-primary blue-background booking-btn">Book now</button></div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="row cars-row">
+                                <div class="cars-holder col-md-6" data-aos="flip-right" data-aos-duration="1500">
+                                    <img src="images/Ferrari.jpg" alt="car img" class="car-img img-fluid">
+                                    <div class="car-details black">
+                                        <h5>Ferrari Yellow</h5>
+                                        <table>
+                                            <tr>
+                                                <td class="left-col small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                                <td class="small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                            </tr>
+                                        </table>
+                                        <div class="text-center"><button class="btn btn-primary blue-background booking-btn">Book now</button></div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cars-holder col-md-6" data-aos="flip-left" data-aos-duration="1500">
+                                    <img src="images/Ferrari.jpg" alt="car img" class="car-img img-fluid">
+                                    <div class="car-details black">
+                                        <h5>Ferrari Yellow</h5>
+                                        <table>
+                                            <tr>
+                                                <td class="left-col small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                                <td class="small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                            </tr>
+                                        </table>
+                                        <div class="text-center"><button class="btn btn-primary blue-background booking-btn">Book now</button></div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="row cars-row">
+                                <div class="cars-holder col-md-6" data-aos="flip-right" data-aos-duration="1500">
+                                    <img src="images/Ferrari.jpg" alt="car img" class="car-img img-fluid">
+                                    <div class="car-details black">
+                                        <h5>Ferrari Yellow</h5>
+                                        <table>
+                                            <tr>
+                                                <td class="left-col small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                                <td class="small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                            </tr>
+                                        </table>
+                                        <div class="text-center"><button class="btn btn-primary blue-background booking-btn">Book now</button></div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cars-holder col-md-6" data-aos="flip-left" data-aos-duration="1500">
+                                    <img src="images/Ferrari.jpg" alt="car img" class="car-img img-fluid">
+                                    <div class="car-details black">
+                                        <h5>Ferrari Yellow</h5>
+                                        <table>
+                                            <tr>
+                                                <td class="left-col small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                                <td class="small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                            </tr>
+                                        </table>
+                                        <div class="text-center view-div"><button class="btn btn-primary blue-background booking-btn">Book now</button></div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="text-center"><button class="btn btn-primary  view-btn">View&nbsp;more</button></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="fleet-main hide" id="wagon" >
+                        <div class="cars-container container-fluid">
+                            <div class="row cars-row " >
+                                <div class="cars-holder col-md-6" data-aos="flip-right" data-aos-duration="1500">
+                                    <img src="images/Ferrari.jpg" alt="car img" class="car-img img-fluid">
+                                    <div class="car-details black">
+                                        <h5>Ferrari Yellow </h5>
+                                        <table>
+                                            <tr>
+                                                <td class="left-col small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                                <td class="small-text font-weight-bold">Price: <span class="blue">48$/hour</span></td>
+                                            </tr>
+                                        </table>
+                                        <div class="text-center"><button class="btn btn-primary blue-background booking-btn">Book now</button></div>
 
                                     </div>
 
@@ -745,58 +1120,45 @@
                 </section>
 
                 <!-- Gallery section -->
-                <section class=" gallery">
+                <section class="gallery">
                     <div class="text-center press-heading gallery-heading">
                         <h2 class="headings gallery-heading">Gallery</h2>
                     </div>
-                    <div class="container-fluid gallery-container">
-                        <div class="img1 img-holder">
-                            <a href="images/gallery1.jpg"><img src="images/gallery1.jpg" alt="" class="gallery-img img-fluid "></a>
-
-                        </div>
-                        <div class="img2 img-holder">
-                            <a href="images/gallery2.jpg"><img src="images/gallery2.jpg" alt="" class="gallery-img img-fluid"></a>
-
-                        </div>
-                        <div class="img3 img-holder">
-                            <a href="images/gallery3.jpg"><img src="images/gallery3.jpg" alt="" class="gallery-img img-fluid"></a>
-
-                        </div>
-                        <div class="img4 img-holder">
-                            <a href="images/gallery4.jpg"><img src="images/gallery4.jpg" alt="" class="gallery-img img-fluid"></a>
-
-                        </div>
-                        <div class="img5 img-holder">
-                            <a href="images/gallery5.jpg"><img src="images/gallery5.jpg" alt="" class="gallery-img img-fluid"></a>
+                    
+                    <div class="container">
+                        <div class="gallery-container">
+                            <div  class="gallery-column">
+                                <a href="images/gallery1.jpg"><img src="images/gallery1.jpg" alt="" class="gallery-img img-fluid "></a>
+                                <a href="images/gallery3.jpg"><img src="images/gallery3.jpg" alt="" class="gallery-img img-fluid"></a>
+                                <a href="images/gallery5.jpg"><img src="images/gallery5.jpg" alt="" class="gallery-img img-fluid"></a>
+                                
+                            </div>
+                            <div  class="gallery-column">
+                                <a href="images/gallery2.jpg"><img src="images/gallery2.jpg" alt="" class="gallery-img img-fluid "></a>
+                                <a href="images/gallery4.jpg"><img src="images/gallery4.jpg" alt="" class="gallery-img img-fluid"></a>
+                                
+                            </div>
 
                         </div>
 
-                    </div>
+                        <!-- <div class="gallery-container-sm">
+                            <div><a href="images/gallery1.jpg"><img src="images/gallery1.jpg" alt="" class="gallery-img img-fluid "></a></div>
+                            <div><a href="images/gallery3.jpg"><img src="images/gallery1.jpg" alt="" class="gallery-img img-fluid "></a></div>
+                            <div><a href="images/gallery1.jpg"><img src="images/gallery1.jpg" alt="" class="gallery-img img-fluid "></a></div>
+                            <div><a href="images/gallery1.jpg"><img src="images/gallery1.jpg" alt="" class="gallery-img img-fluid "></a></div>
+                            <div><a href="images/gallery1.jpg"><img src="images/gallery1.jpg" alt="" class="gallery-img img-fluid "></a></div>
 
-                    <div class="container-fluid gallery-container-sm">
-                        <div class="img1-sm img-holder">
-                            <a href="images/gallery1.jpg"><img src="images/gallery1.jpg" alt="" class="gallery-img img-fluid "></a>
-
-                        </div>
-                        <div class="img2-sm img-holder">
-                            <a href="images/gallery2.jpg"><img src="images/gallery2.jpg" alt="" class="gallery-img img-fluid"></a>
-                        </div>
-                        <div class="img3-sm img-holder">
-                            <a href="images/gallery3.jpg"><img src="images/gallery3.jpg" alt="" class="gallery-img img-fluid"></a>
-
-                        </div>
-                        <div class="img4-sm img-holder">
-                            <a href="images/gallery4.jpg"><img src="images/gallery4.jpg" alt="" class="gallery-img img-fluid"></a>
-
-                        </div>
-                        <div class="img5-sm img-holder">
-                            <a href="images/gallery5.jpg"><img src="images/gallery5.jpg" alt="" class="gallery-img img-fluid"></a>
-
-                        </div>
-
+                        </div> -->
                     </div>
 
                     <div class="text-center gallery-view"><button class="btn  view-btn">View&nbsp;more</button></div>
+
+                </section>
+
+                <section class="">
+                    <div class="seperator-div">
+
+                    </div>
 
                 </section>
 
@@ -973,7 +1335,7 @@
             </main>
     
             <footer class=" footer-section">
-                <div class="container-fluid" data-aos="flip-up" data-aos-duration="1500">
+                <div class="container-fluid" data-aos="flip-up" data-aos-duration="1500" id="footer">
                     <div class="row footer-row sections">
                         <div class="footer-card col-md-6 col-lg-3">
                             <div class="  footer-heading">
@@ -1020,10 +1382,10 @@
                             </div>
                             <div class="footer-text">
                                 <div class="footer-sm ">
-                                    <div class=""><i class="uil uil-instagram-alt sm-icons white"></i></div>
-                                    <div class=""><i class="uil uil-facebook sm-icons white"></i></div>
-                                    <div class=""><i class="uil uil-linkedin sm-icons white"></i></div>
-                                    <div class=""><i class="uil uil-twitter sm-icons white"></i></div>
+                                    <div class=""><a href="#footer"><i class="uil uil-instagram-alt sm-icons white"></i></a></div>
+                                    <div class=""><a href="#footer"><i class="uil uil-facebook sm-icons white"></i></a></div>
+                                    <div class=""><a href="#footer"><i class="uil uil-linkedin sm-icons white"></i></a></div>
+                                    <div class=""><a href="#footer"><i class="uil uil-twitter sm-icons white"></i></a></div>
                                 </div>
                             </div>
 
