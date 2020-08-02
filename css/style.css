@@ -1121,7 +1121,7 @@ td{
     }
 
     .cta-container{
-        padding: 10% 12%;
+        padding: 10% 5%;
     }
 
     .address-card{
@@ -1135,6 +1135,10 @@ td{
 
     .footer-card{
         margin-bottom: 9%;
+    }
+
+    form{
+        padding-left: 2% !important;
     }
     
 }
