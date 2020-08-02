@@ -1140,7 +1140,12 @@ td{
     form{
         padding-left: 2% !important;
     }
-    
+
+    .contact-form{
+        padding-left: 0 !important;
+    }
+
+
 }
 
 
